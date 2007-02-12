@@ -6,7 +6,7 @@
 %define	pdir	File
 %define	pnam	HomeDir
 Summary:	File::HomeDir - Find your home and other directories, on any platform
-Summary(pl.UTF-8):   File::HomeDir - określanie katalogu domowego i innych katalogów na dowolnej platformie
+Summary(pl.UTF-8):	File::HomeDir - określanie katalogu domowego i innych katalogów na dowolnej platformie
 Name:		perl-File-HomeDir
 Version:	0.58
 Release:	1
