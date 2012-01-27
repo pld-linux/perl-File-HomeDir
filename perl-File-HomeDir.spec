@@ -8,19 +8,20 @@
 Summary:	File::HomeDir - Find your home and other directories, on any platform
 Summary(pl.UTF-8):	File::HomeDir - określanie katalogu domowego i innych katalogów na dowolnej platformie
 Name:		perl-File-HomeDir
-Version:	0.98
+Version:	0.99
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6db96f151a707894e0822c8014ae80dd
+# Source0-md5:	cb058c68393631344c2b906026091016
 URL:		http://search.cpan.org/dist/File-HomeDir/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(Cwd) >= 3.12
 BuildRequires:	perl(File::Spec) >= 3.12
+BuildRequires:	perl-File-Which
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
