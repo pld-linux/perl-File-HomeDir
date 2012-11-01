@@ -8,21 +8,29 @@
 Summary:	File::HomeDir - Find your home and other directories, on any platform
 Summary(pl.UTF-8):	File::HomeDir - określanie katalogu domowego i innych katalogów na dowolnej platformie
 Name:		perl-File-HomeDir
-Version:	0.99
+Version:	1.00
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	cb058c68393631344c2b906026091016
+# Source0-md5:	aa290cab9db52e2f76280fd1febf794e
 URL:		http://search.cpan.org/dist/File-HomeDir/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(Cwd) >= 3.12
+BuildRequires:	perl(File::Path) >= 2.01
 BuildRequires:	perl(File::Spec) >= 3.12
-BuildRequires:	perl-File-Which
+BuildRequires:	perl-File-Temp >= 0.19
+BuildRequires:	perl-File-Which >= 0.05
+BuildRequires:	perl-Test-Simple >= 0.47
 %endif
+Requires:	perl(Cwd) >= 3.12
+Requires:	perl(File::Path) >= 2.01
+Requires:	perl(File::Spec) >= 3.12
+Requires:	perl-File-Temp >= 0.19
+Requires:	perl-File-Which >= 0.05
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -59,6 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/File/*.pm
+%{perl_vendorlib}/File/HomeDir.pm
 %{perl_vendorlib}/File/HomeDir
-%{_mandir}/man3/*
+%{_mandir}/man3/File::HomeDir*.3pm*
