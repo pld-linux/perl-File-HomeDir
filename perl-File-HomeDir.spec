@@ -17,6 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.t
 URL:		https://metacpan.org/dist/File-HomeDir
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl(Cwd) >= 3.12
 BuildRequires:	perl(File::Path) >= 2.01
