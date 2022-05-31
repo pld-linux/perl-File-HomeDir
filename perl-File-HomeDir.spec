@@ -1,20 +1,20 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define	pdir	File
 %define	pnam	HomeDir
 Summary:	File::HomeDir - Find your home and other directories, on any platform
 Summary(pl.UTF-8):	File::HomeDir - określanie katalogu domowego i innych katalogów na dowolnej platformie
 Name:		perl-File-HomeDir
-Version:	1.004
+Version:	1.006
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2db6a961960baec790a896b99b46395d
-URL:		http://search.cpan.org/dist/File-HomeDir/
+# Source0-md5:	3a59f74d227fdf97b2af908a2d4fee05
+URL:		https://metacpan.org/dist/File-HomeDir
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
